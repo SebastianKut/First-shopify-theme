@@ -4,7 +4,10 @@
   "description": "To use this repository for making Shopify themes, use the following command of Shopify CLI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "shopify": "shopify theme serve",
+    "watch": "tailwindcss -i ./src/tailwind.css -o ./assets/application.css --watch",
+    "dev": "concurrently --kill-others \"npm run shopify\" \"npm run watch\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,7 @@
   "homepage": "https://github.com/SebastianKut/shopify-tailwind-starter#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
+    "concurrently": "^7.1.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
   }
