@@ -15,7 +15,7 @@
             {% if section.settings.enable_display_vendor %}
                 <span class="text-sm text-gray-400">{{ product.vendor }}</span>
             {% endif %}
-            <a href="{{ product.url }}" class="text-gray-700 uppercase font-medium">{{ product.title }}</a>
+            <a href="{{ product.url }}" class="text-gray-700 uppercase font-medium">{{ product.title | truncate: 20 }}</a>
 
             <p class="text-gray-500">{{ product.price | money }}</p>
         </div>
