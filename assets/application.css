@@ -644,6 +644,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-94 {
+  height: 22rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
